@@ -39,6 +39,7 @@
   align-items: center;
   font-size: 3.5em;
   overflow: auto;
+  padding: 0 0.5rem;
 }
 
 .container .calculator .body {
