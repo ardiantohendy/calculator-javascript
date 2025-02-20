@@ -12,16 +12,24 @@ const num9 = document.getElementById("num9");
 const num0 = document.getElementById("num0");
 const plusOp = document.getElementById("plusOp");
 const minOp = document.getElementById("minOp");
+const mulOp = document.getElementById("mulOp");
+const divOp = document.getElementById("divOp");
+const perOp = document.getElementById("perOp");
 const resetBtn = document.getElementById("resetBtn");
 
-const numConver = (number) => {
-  let conver = Number(number);
-  return conver;
-};
-
-//OPERATION
+//OPERATIONS
 resetBtn.onclick = () => {
   opNUm.innerText = 0;
+};
+
+resultBtn.onclick = () => {
+  let result;
+  let resultPer;
+  if (opNUm.innerText.includes("%")) {
+    opNUm.innerText = parseFloat(opNUm.innerText) / 100;
+  } else {
+    opNUm.innerText = eval(opNUm.innerText);
+  }
 };
 
 plusOp.onclick = () => {
@@ -32,18 +40,24 @@ minOp.onclick = () => {
   opNUm.innerText += minOp.innerText;
 };
 
-resultBtn.onclick = () => {
-  let result = eval(opNUm.innerText);
-  opNUm.innerText = result;
-  console.log(result);
+mulOp.onclick = () => {
+  opNUm.innerText += mulOp.innerText;
+};
+
+divOp.onclick = () => {
+  opNUm.innerText += divOp.innerText;
+};
+
+perOp.onclick = () => {
+  opNUm.innerText += perOp.innerText;
 };
 
 //NUMBER BUTTONS
 num1.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num1.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num1.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 1;
     opNUm.innerText = numberPlus;
   }
@@ -51,9 +65,9 @@ num1.onclick = () => {
 
 num2.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num2.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num2.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 2;
     opNUm.innerText = numberPlus;
   }
@@ -61,9 +75,9 @@ num2.onclick = () => {
 
 num3.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num3.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num3.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 3;
     opNUm.innerText = numberPlus;
   }
@@ -71,9 +85,9 @@ num3.onclick = () => {
 
 num4.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num4.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num4.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 4;
     opNUm.innerText = numberPlus;
   }
@@ -81,9 +95,9 @@ num4.onclick = () => {
 
 num5.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num5.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num5.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 5;
     opNUm.innerText = numberPlus;
   }
@@ -91,9 +105,9 @@ num5.onclick = () => {
 
 num6.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num6.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num6.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 6;
     opNUm.innerText = numberPlus;
   }
@@ -101,9 +115,9 @@ num6.onclick = () => {
 
 num7.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num7.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num7.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 7;
     opNUm.innerText = numberPlus;
   }
@@ -111,9 +125,9 @@ num7.onclick = () => {
 
 num8.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num8.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num8.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 8;
     opNUm.innerText = numberPlus;
   }
@@ -121,9 +135,9 @@ num8.onclick = () => {
 
 num9.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num9.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num9.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 9;
     opNUm.innerText = numberPlus;
   }
@@ -131,9 +145,9 @@ num9.onclick = () => {
 
 num0.onclick = () => {
   let numberPlus;
-  if (numConver(opNUm.innerText) == 0) {
-    numConver((opNUm.innerText = numConver(num0.innerText)));
-  } else if (numConver(opNUm.innerText) != 0) {
+  if (Number(opNUm.innerText) == 0) {
+    Number((opNUm.innerText = Number(num0.innerText)));
+  } else if (Number(opNUm.innerText) != 0) {
     numberPlus = opNUm.innerText + 0;
     opNUm.innerText = numberPlus;
   }
